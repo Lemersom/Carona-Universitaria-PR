@@ -29,4 +29,4 @@ public class Pessoa {
     public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }
-} 
+}

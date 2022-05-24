@@ -19,6 +19,7 @@ public class Piloto extends Pessoa{
     public int getGanhos() {
         return ganhos;
     }
+    
     public void setVeiculo(String veiculo) {
         this.veiculo = veiculo;
     }

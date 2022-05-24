@@ -19,3 +19,4 @@ public class Passageiro extends Pessoa{
         this.conta_banco = conta_banco;
     }
 }
+ 

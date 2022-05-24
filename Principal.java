@@ -1,12 +1,29 @@
 public class Principal {
 
-    public static void main(String arg[]){
+    private static int resp = 0;
+
+    public static int verResp(int resp){
+        if(resp == 1 || resp == 2){
+            return resp;
+        }
+        else{
+            resp = 0;
+            return resp;
+        }
+    }
+
+    public static void main(String[] arg){
         Leitura l = new Leitura();
         Passageiro pa = new Passageiro();
         Piloto pi = new Piloto();
 
-        int resp = 0;
-        resp = Integer.parseInt(l.entDados("(1) - Piloto\n(2) - Passageiro"));
+        try{
+            resp = Integer.parseInt(l.entDados("(1) - Piloto\n(2) - Passageiro"));
+            resp = verResp(resp);
+        }
+        catch(NumberFormatException erro){
+            System.out.println("\n Valor deve ser um inteiro");
+        }
 
         if(resp == 1){
             pi.pegarDados();
@@ -15,7 +32,7 @@ public class Principal {
             pa.pegarDados();
         }
         else{
-            System.out.println("ERRO! Tente Novamente");
+            System.out.println("\n\tERRO! Tente Novamente");
         }
     }
 }
